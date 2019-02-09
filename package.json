@@ -1,0 +1,24 @@
+{
+  "name": "@rxluz/prevent-object-recursion",
+  "version": "0.0.1",
+  "description": "Remove all recursive references from the object",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rxluz/prevent-object-recursion.git"
+  },
+  "keywords": [
+    "js",
+    "object",
+    "recursion"
+  ],
+  "author": "Ricardo Luz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rxluz/prevent-object-recursion/issues"
+  },
+  "homepage": "https://github.com/rxluz/prevent-object-recursion#readme"
+}
