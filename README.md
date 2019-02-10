@@ -1,2 +1,3 @@
-# prevent-object-recursion
+# @rxluz/prevent-object-recursion
+
 Remove all recursive references from the object
