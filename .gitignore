@@ -9,4 +9,3 @@ coverage
 *.log
 
 yarn.lock
-.coveralls.yml
