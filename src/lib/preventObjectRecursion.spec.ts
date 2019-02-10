@@ -1,11 +1,15 @@
 // tslint:disable:no-expression-statement
 import test from 'ava';
-import { double, power } from './preventObjectRecursion';
+import preventObjectRecursion from './preventObjectRecursion';
 
-test('double', t => {
-  t.is(double(2), 4);
-});
+test('remove recursive calls from a simple object', t => {
+  const a = { hello: 'world', bb: {} };
+  const b = { hello: a };
+  // tslint:disable-next-line
+  a.bb = b;
 
-test('power', t => {
-  t.is(power(2, 4), 16);
+  t.is(
+    JSON.stringify(preventObjectRecursion(a)),
+    JSON.stringify({ hello: 'world' })
+  );
 });
