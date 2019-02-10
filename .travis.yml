@@ -8,5 +8,5 @@ cache:
   directories:
     - '$HOME/.npm'
 after_success:
-  - npx nyc report --reporter=lcov | npx codecov
+  - npx nyc report --reporter=lcov | coveralls
   - npm run cov:check
