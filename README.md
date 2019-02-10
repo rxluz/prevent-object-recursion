@@ -50,6 +50,10 @@ $ npm i @rxluz/prevent-object-recursion --save
 - This project was inspired by a chat in NodeJS Brasil Telegram Group.
 - [rxluz](https://github.com/rxluz)
 
+## See Also
+
+- [`Project documentation`](https://rxluz.github.io/prevent-object-recursion/)
+
 ## License
 
 MIT
