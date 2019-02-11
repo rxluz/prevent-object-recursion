@@ -2,9 +2,9 @@
   "name": "@rxluz/prevent-object-recursion",
   "version": "0.0.14",
   "description": "Remove all recursive references from the object",
-  "main": "build/main/index.js",
+  "main": "build/main/lib/preventObjectRecursion.js",
   "typings": "build/main/index.d.ts",
-  "module": "build/module/index.js",
+  "module": "build/module/lib/preventObjectRecursion.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rxluz/prevent-object-recursion.git"
