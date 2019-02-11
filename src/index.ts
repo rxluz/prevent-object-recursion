@@ -1,1 +1,3 @@
-export * from './lib/preventObjectRecursion';
+import preventObjectRecursion from './lib/preventObjectRecursion';
+
+export default preventObjectRecursion;
