@@ -52,7 +52,7 @@ $ npm i @rxluz/prevent-object-recursion --save
 
 ## See Also
 
-- [`Project documentation`](https://rxluz.github.io/prevent-object-recursion/)
+- [Project documentation](https://rxluz.github.io/prevent-object-recursion/)
 
 ## License
 
