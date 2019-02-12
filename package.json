@@ -1,6 +1,6 @@
 {
   "name": "@rxluz/prevent-object-recursion",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Remove all recursive references from the object",
   "main": "build/main/lib/preventObjectRecursion.js",
   "typings": "build/main/index.d.ts",
