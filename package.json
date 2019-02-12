@@ -46,7 +46,7 @@
     "clean": "trash build test",
     "all": "run-s reset test cov:check doc:html",
     "prepare-release": "run-s all version doc doc:publish",
-    "publish": "git push --follow-tags origin master; npm publish"
+    "publish": "git add . && git cz && run-s prepare-release && git push --follow-tags origin master && npm publish"
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
