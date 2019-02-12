@@ -1,6 +1,6 @@
 {
   "name": "@rxluz/prevent-object-recursion",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Remove all recursive references from the object",
   "main": "build/main/lib/preventObjectRecursion.js",
   "typings": "build/main/index.d.ts",
@@ -60,7 +60,7 @@
     "version": "Bump package.json version, update CHANGELOG.md, tag release",
     "reset": "Delete all untracked files and reset the repo to the last commit",
     "prepare-release": "One-step: clean, build, test, publish docs, and prep a release",
-    "publish": "Run git push --follow-tags origin master; npm publish"
+    "publish": "Create a new commit, run prepare-release and run git push --follow-tags origin master; npm publish"
   },
   "engines": {
     "node": ">=8.9"
