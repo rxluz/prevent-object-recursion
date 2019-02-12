@@ -53,7 +53,7 @@ $ npm i @rxluz/prevent-object-recursion --save
 ## See Also
 
 - [Project documentation](https://rxluz.github.io/prevent-object-recursion/)
-- [Dev.to post about this project](https://dev.to/ricardo/i-wrote-an-npm-package-to-prevent-infinite-recursion-in-objects-5422)
+- [Dev.to platform post about this project](https://dev.to/ricardo/i-wrote-an-npm-package-to-prevent-infinite-recursion-in-objects-5422)
 
 ## License
 
