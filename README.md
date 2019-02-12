@@ -27,7 +27,7 @@ console.log(preventObjectRecursion(a));
 ### Example (commonjs)
 
 ```js
-var preventObjectRecursion = require('@rxluz/prevent-object-recursion');
+var preventObjectRecursion = require('@rxluz/prevent-object-recursion').default;
 
 const a = { hello: 'world' };
 const b = { hey: 'hey', hello: a };

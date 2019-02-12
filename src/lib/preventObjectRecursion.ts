@@ -15,7 +15,7 @@
  *
  * ### Example (commonjs)
  * ```js
- * const preventObjectRecursion = require('@rxluz/prevent-object-recursion');
+ * const preventObjectRecursion = require('@rxluz/prevent-object-recursion').default;
  *
  * const a = { hello: 'world' }
  * const b = { hey: 'hey', hello: a }
@@ -30,10 +30,9 @@
  * @anotherNote   Works in the browser as well as node.
  */
 
-export default function preventObjectRecursion(
-  root: any,
-  list: any = []
-): object {
+// tslint:disable-next-line:export-just-namespace
+
+export default function preventObjectRecursion(root: any, list: any = []): any {
   // keys with null data or with string/function/boolean data couldn't create recursive data, in this case we simply return this data
   const rootIsNullOrNotAObject = !root || typeof root !== 'object';
 
@@ -58,7 +57,7 @@ export default function preventObjectRecursion(
       ? Object.keys(root).reduce(
           (accumulator: object, key: string) => ({
             ...accumulator,
-
+            // tslint:disable-next-line
             [key]: preventObjectRecursion(root[key], [...list])
           }),
           {}
