@@ -85,7 +85,7 @@ a.newProp = b;
 <span class="hljs-built_in">console</span>.log(preventObjectRecursion(a));
 <span class="hljs-comment">// =&gt; { hello: 'world', newProp: { hey: 'hey' }}</span></code></pre>
 				<h3 id="example-commonjs-">Example (commonjs)</h3>
-				<pre><code class="language-js"><span class="hljs-keyword">var</span> preventObjectRecursion = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@rxluz/prevent-object-recursion'</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">var</span> preventObjectRecursion = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@rxluz/prevent-object-recursion'</span>).default;
 
 <span class="hljs-keyword">const</span> a = { <span class="hljs-attr">hello</span>: <span class="hljs-string">'world'</span> };
 <span class="hljs-keyword">const</span> b = { <span class="hljs-attr">hey</span>: <span class="hljs-string">'hey'</span>, <span class="hljs-attr">hello</span>: a };

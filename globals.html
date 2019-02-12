@@ -82,13 +82,13 @@
 					<a name="preventobjectrecursion" class="tsd-anchor"></a>
 					<h3>prevent<wbr>Object<wbr>Recursion</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">prevent<wbr>Object<wbr>Recursion<span class="tsd-signature-symbol">(</span>root<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, list<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+						<li class="tsd-signature tsd-kind-icon">prevent<wbr>Object<wbr>Recursion<span class="tsd-signature-symbol">(</span>root<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, list<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/rxluz/prevent-object-recursion/blob/7e95fd8/src/lib/preventObjectRecursion.ts#L33">lib/preventObjectRecursion.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/rxluz/prevent-object-recursion/blob/c931db5/src/lib/preventObjectRecursion.ts#L35">lib/preventObjectRecursion.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -105,7 +105,7 @@ a.newProp = b
 <span class="hljs-built_in">console</span>.log(preventObjectRecursion(a))
 <span class="hljs-comment">// =&gt; { hello: 'world', newProp: { hey: 'hey' }}</span></code></pre>
 								<h3 id="example-commonjs-">Example (commonjs)</h3>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> preventObjectRecursion = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@rxluz/prevent-object-recursion'</span>);
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> preventObjectRecursion = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@rxluz/prevent-object-recursion'</span>).default;
 
 <span class="hljs-keyword">const</span> a = { <span class="hljs-attr">hello</span>: <span class="hljs-string">'world'</span> }
 <span class="hljs-keyword">const</span> b = { <span class="hljs-attr">hey</span>: <span class="hljs-string">'hey'</span>, <span class="hljs-attr">hello</span>: a }
@@ -128,7 +128,7 @@ a.newProp = b
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> list: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 							<p>Returns a new object without the recursive references.</p>
 						</li>
 					</ul>
