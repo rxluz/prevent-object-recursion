@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.18"></a>
+## [0.0.18](https://github.com/rxluz/prevent-object-recursion/compare/v0.0.17...v0.0.18) (2019-02-12)
+
+
+
 <a name="0.0.17"></a>
 ## [0.0.17](https://github.com/rxluz/prevent-object-recursion/compare/v0.0.16...v0.0.17) (2019-02-12)
 
