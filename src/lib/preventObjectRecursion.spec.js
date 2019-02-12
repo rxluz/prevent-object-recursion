@@ -2,36 +2,37 @@
 exports.__esModule = true;
 // tslint:disable:no-expression-statement
 var ava_1 = require("ava");
-var preventObjectRecursion_1 = require("./preventObjectRecursion");
+var index_1 = require("../index");
 ava_1["default"]('remove recursive calls from a simple object', function (t) {
     var a = { hello: 'world', bb: {} };
     var b = { hello: a };
     // tslint:disable-next-line
     a.bb = b;
-    t.is(JSON.stringify(preventObjectRecursion_1["default"](a)), JSON.stringify({ hello: 'world', bb: { hello: {} } }));
+    t.is(JSON.stringify(index_1["default"](a)), JSON.stringify({ hello: 'world', bb: { hello: {} } }));
 });
-ava_1["default"]('remove recursive calls from a complext object', function (t) {
-    var valentina = { name: 'Valentina', otherSon: null };
+ava_1["default"]('remove recursive calls from an complex object', function (t) {
+    var valentina = { name: 'Valentina', otherSon: {} };
     var invalidFamily = {
         name: 'Manuel',
-        son: valentina,
         otherSon: {
             name: 'Valdir',
-            son: valentina,
             otherSon: {
                 name: 'Ricardo',
                 son: valentina
-            }
-        }
+            },
+            son: valentina
+        },
+        son: valentina
     };
+    // tslint:disable-next-line
     invalidFamily.son.otherSon = valentina;
-    t.is(JSON.stringify(preventObjectRecursion_1["default"](invalidFamily)), JSON.stringify({
+    t.is(JSON.stringify(index_1["default"](invalidFamily)), JSON.stringify({
         name: 'Manuel',
-        son: { name: 'Valentina', otherSon: {} },
         otherSon: {
             name: 'Valdir',
-            son: { name: 'Valentina', otherSon: {} },
-            otherSon: { name: 'Ricardo', son: { name: 'Valentina', otherSon: {} } }
-        }
+            otherSon: { name: 'Ricardo', son: { name: 'Valentina', otherSon: {} } },
+            son: { name: 'Valentina', otherSon: {} }
+        },
+        son: { name: 'Valentina', otherSon: {} }
     }));
 });

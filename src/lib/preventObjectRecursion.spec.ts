@@ -1,6 +1,6 @@
 // tslint:disable:no-expression-statement
 import test from 'ava';
-import preventObjectRecursion from '../index';
+import preventObjectRecursion from './preventObjectRecursion';
 
 test('remove recursive calls from a simple object', t => {
   const a = { hello: 'world', bb: {} };

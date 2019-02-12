@@ -3,7 +3,7 @@
  *
  * ### Example (es module)
  * ```js
- * import preventObjectRecursion from 'prevent-object-recursion'
+ * import preventObjectRecursion from '@rxluz/prevent-object-recursion'
  *
  * const a = { hello: 'world' }
  * const b = { hey: 'hey', hello: a }
@@ -15,7 +15,7 @@
  *
  * ### Example (commonjs)
  * ```js
- * const preventObjectRecursion = require('prevent-object-recursion');
+ * const preventObjectRecursion = require('@rxluz/prevent-object-recursion');
  *
  * const a = { hello: 'world' }
  * const b = { hey: 'hey', hello: a }

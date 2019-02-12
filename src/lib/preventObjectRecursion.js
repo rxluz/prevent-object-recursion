@@ -16,7 +16,7 @@
  *
  * ### Example (commonjs)
  * ```js
- * var preventObjectRecursion = require('prevent-object-recursion');
+ * const preventObjectRecursion = require('prevent-object-recursion');
  *
  * const a = { hello: 'world' }
  * const b = { hey: 'hey', hello: a }
@@ -42,7 +42,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-function removeRecursion(root, list) {
+function preventObjectRecursion(root, list) {
     if (list === void 0) { list = []; }
     // keys with null data or with string/function/boolean data couldn't create recursive data, in this case we simply return this data
     var rootIsNullOrNotAObject = !root || typeof root !== 'object';
@@ -55,14 +55,16 @@ function removeRecursion(root, list) {
     /* we need add the current root in list array,
         this will allow compare this root with its children,
         this comparison will help us to find recursive data */
+    // tslint:disable-next-line
+    list.push(root);
     var rootClean = function () {
         return !rootIsNullOrNotAObject && !hasRecursion
             ? Object.keys(root).reduce(function (accumulator, key) {
                 var _a;
-                return (__assign({}, accumulator, (_a = {}, _a[key] = removeRecursion(root[key], [root].concat(list)), _a)));
+                return (__assign({}, accumulator, (_a = {}, _a[key] = preventObjectRecursion(root[key], list.slice()), _a)));
             }, {})
             : {};
     };
     return rootIsNullOrNotAObject ? root : hasRecursion ? {} : rootClean();
 }
-exports["default"] = removeRecursion;
+exports["default"] = preventObjectRecursion;
