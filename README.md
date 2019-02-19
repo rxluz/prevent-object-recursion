@@ -1,4 +1,4 @@
-# @rxluz/prevent-object-recursion
+# @rxluz/prevent-object-recursion [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Remove%20all%20recursive%20references%20from%20the%20object&url=https://github.com/rxluz/prevent-object-recursion)
 
 > ➰ Remove all recursive references from the object
 
